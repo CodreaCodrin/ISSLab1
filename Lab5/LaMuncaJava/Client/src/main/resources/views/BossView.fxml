@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="iss.Controllers.BossController">
+
+    <!-- Title -->
+    <Label text="Worker List" />
+
+    <!-- TableView -->
+    <TableView fx:id="workerTableView" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Nume" prefWidth="200"/>
+            <TableColumn fx:id="timeColumn" text="Ora" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <!-- Task description input -->
+    <HBox spacing="5">
+        <Label text="Task description" />
+        <TextField fx:id="taskField" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="5">
+        <Button text="Send" maxWidth="100" onAction="#hadleSendTask"/>
+        <Button text="RegisterWorker" maxWidth="100" onAction="#handleRegisterWorker"/>
+        <Button text="Log out" maxWidth="100"/>
+    </HBox>
+</VBox>

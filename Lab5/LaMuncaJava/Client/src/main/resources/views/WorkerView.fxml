@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="iss.Controllers.WorkerController">
+
+    <!-- Title -->
+    <Label text="Task List" />
+
+    <!-- TableView with one column -->
+    <TableView fx:id="taskTableView" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="descriptionColumn" text="Descriere" prefWidth="400"/>
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Task finalizat" onAction="#handleTaskFinished"/>
+        <Button text="Logout" onAction="#logOut" />
+    </HBox>
+</VBox>

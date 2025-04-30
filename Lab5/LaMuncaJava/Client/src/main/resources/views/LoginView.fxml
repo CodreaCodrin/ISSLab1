@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER"
+      spacing="10"
+      style="-fx-padding: 20;"
+      fx:controller="iss.Controllers.LoginController">
+
+    <!-- Username Field -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Username:"/>
+        <TextField fx:id="usernameField" promptText="Enter your username" text="Codrin"/>
+    </HBox>
+
+    <!-- Password Field -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Password:"/>
+        <PasswordField fx:id="passwordField" promptText="Enter your password" text="ode432"/>
+    </HBox>
+
+    <fx:define>
+        <ToggleGroup fx:id="roleGroup"/>
+    </fx:define>
+
+    <HBox spacing="10">
+        <RadioButton fx:id="workerRadio" text="Worker" toggleGroup="$roleGroup" onAction="#typeWorker"/>
+        <RadioButton fx:id="bossRadio" text="Boss" toggleGroup="$roleGroup" selected="true" onAction="#typeBoss"/>
+    </HBox>
+
+    <!-- Login Button -->
+    <Button text="Login" fx:id="loginButton" prefWidth="100" onAction="#handleLoginUser"/>
+</VBox>

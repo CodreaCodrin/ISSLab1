@@ -1,0 +1,6 @@
+rootProject.name = 'LaMuncaJava'
+include 'Domain'
+include 'Repository'
+include 'Service'
+include 'Client'
+
