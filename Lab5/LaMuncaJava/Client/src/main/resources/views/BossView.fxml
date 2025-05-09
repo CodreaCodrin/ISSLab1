@@ -4,9 +4,11 @@
 <?import javafx.scene.layout.*?>
 
 <VBox spacing="10"
+      fx:id="bossRootVBox"
       xmlns="http://javafx.com/javafx/8"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="iss.Controllers.BossController">
+      fx:controller="iss.Controllers.BossController"
+      stylesheets="@../css/boss.css">
 
     <!-- Title -->
     <Label text="Worker List" />
@@ -28,7 +30,7 @@
     <!-- Buttons -->
     <HBox spacing="5">
         <Button text="Send" maxWidth="100" onAction="#hadleSendTask"/>
-        <Button text="RegisterWorker" maxWidth="100" onAction="#handleRegisterWorker"/>
+        <Button text="RegisterWorker" maxWidth="200" onAction="#handleRegisterWorker"/>
         <Button text="Log out" maxWidth="100"/>
     </HBox>
 </VBox>

@@ -1,0 +1,179 @@
+/* Main styling */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Root VBox styling cu background image */
+VBox {
+    -fx-spacing: 15;
+    -fx-padding: 20;
+    -fx-background-image: url("../images/dark-gray-background-hy2ztpcjg534mic7.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Title Label styling */
+VBox > .label:first-child {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff0000; /* Red title */
+    -fx-padding: 5 0 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 3, 0, 0, 1);
+    -fx-alignment: center;
+}
+
+/* Labels general styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* White text */
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: #550000; /* Dark red cell borders */
+    -fx-border-color: #cc0000; /* Red border around table */
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #cc0000; /* Red header background */
+    -fx-padding: 5;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 45;
+    -fx-border-color: #550000; /* Dark red borders */
+    -fx-border-width: 0 1 2 0;
+    -fx-border-insets: 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 5;
+}
+
+.table-row-cell {
+    -fx-background-color: #1a1a1a; /* Very dark gray for rows */
+    -fx-text-fill: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #2a2a2a; /* Slightly lighter gray for alternating rows */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #550000; /* Dark red for selected row */
+    -fx-table-cell-border-color: #ff0000; /* Bright red border for selected cell */
+}
+
+.table-cell {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+    -fx-padding: 8 15;
+}
+
+/* HBox for buttons - centered */
+HBox {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+    -fx-padding: 10 0;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #cc0000; /* Red background */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-min-width: 130;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 0);
+}
+
+.button:hover {
+    -fx-background-color: #ff0000; /* Brighter red on hover */
+    -fx-effect: dropshadow(gaussian, rgba(255,0,0,0.3), 8, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.button:pressed {
+    -fx-background-color: #990000; /* Darker red when pressed */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 5, 0, 0, 0);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Special styling for the "Task finalizat" button */
+HBox .button:first-child {
+    -fx-background-color: #cc0000; /* Red for the standard state */
+}
+
+HBox .button:first-child:hover {
+    -fx-background-color: #ff0000; /* Brighter red on hover */
+}
+
+HBox .button:first-child:pressed {
+    -fx-background-color: #990000; /* Darker red when pressed */
+}
+
+/* Special styling for the "Logout" button */
+HBox .button:last-child {
+    -fx-background-color: #550000; /* Darker red for the logout button */
+}
+
+HBox .button:last-child:hover {
+    -fx-background-color: #880000; /* Medium red on hover */
+}
+
+HBox .button:last-child:pressed {
+    -fx-background-color: #330000; /* Very dark red when pressed */
+}
+
+/* ScrollBars */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: #222222;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #cc0000;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #ff0000;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #222222;
+    -fx-border-color: #550000;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #cc0000;
+}
+
+/* Add a semi-transparent overlay panel for better content visibility */
+.content-panel {
+    -fx-background-color: rgba(10, 10, 10, 0.7);
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}

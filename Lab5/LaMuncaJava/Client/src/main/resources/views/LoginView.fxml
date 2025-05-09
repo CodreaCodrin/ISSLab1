@@ -10,7 +10,9 @@
       alignment="CENTER"
       spacing="10"
       style="-fx-padding: 20;"
-      fx:controller="iss.Controllers.LoginController">
+      fx:controller="iss.Controllers.LoginController"
+      stylesheets="@../css/login.css"
+      fx:id="rootVBox">
 
     <!-- Username Field -->
     <HBox alignment="CENTER_LEFT" spacing="10">

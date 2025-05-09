@@ -5,9 +5,11 @@
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
+      fx:id="registerRootVBox"
       alignment="CENTER"
       spacing="10"
-      style="-fx-padding: 20;"
+      styleClass="vbox-overlay"
+      stylesheets="@../css/register.css"
       fx:controller="iss.Controllers.RegisterController">
 
     <!-- Username Field -->

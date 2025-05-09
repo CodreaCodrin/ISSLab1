@@ -1,0 +1,156 @@
+/* Main styling */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Root VBox styling cu background image */
+VBox {
+    -fx-spacing: 10;
+    -fx-padding: 20;
+    -fx-background-image: url("../images/dark-gray-background-hy2ztpcjg534mic7.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* White text for better contrast */
+}
+
+/* Title label special styling */
+VBox > .label:first-child {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ff0000; /* Red text for title */
+    -fx-padding: 0 0 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.7), 3, 0, 0, 1);
+}
+
+/* Text field styling */
+.text-field {
+    -fx-font-size: 14px;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-border-color: #550000; /* Dark red border */
+    -fx-border-width: 1;
+    -fx-padding: 8;
+    -fx-background-color: #1a1a1a; /* Very dark gray background */
+    -fx-text-fill: white; /* White text in the fields */
+    -fx-prompt-text-fill: #888888; /* Light gray for prompt text */
+}
+
+.text-field:focused {
+    -fx-border-color: #ff0000; /* Bright red border when focused */
+    -fx-effect: dropshadow(gaussian, rgba(255,0,0,0.4), 5, 0, 0, 0);
+}
+
+/* HBox containers styling */
+HBox {
+    -fx-padding: 5;
+    -fx-alignment: center-left;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: #550000; /* Dark red border for cells */
+    -fx-border-color: #cc0000; /* Red border */
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #cc0000; /* Red header */
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35;
+    -fx-border-color: #550000;
+    -fx-border-width: 0 1 1 0;
+    -fx-border-insets: 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-background-color: #1a1a1a; /* Very dark gray for rows */
+    -fx-text-fill: white;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #2a2a2a; /* Slightly lighter gray for alternating rows */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #550000; /* Dark red for selected row */
+    -fx-table-cell-border-color: #ff0000; /* Bright red border for selected cell */
+}
+
+.table-cell {
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-padding: 5 10;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #cc0000; /* Red background */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 15;
+    -fx-background-radius: 3;
+    -fx-border-radius: 3;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #ff0000; /* Brighter red on hover */
+}
+
+.button:pressed {
+    -fx-background-color: #990000; /* Darker red when pressed */
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.4), 5, 0, 0, 0);
+}
+
+/* Button HBox styling */
+HBox:last-child {
+    -fx-alignment: center;
+    -fx-spacing: 15;
+}
+
+/* ScrollBars */
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: #222222;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #cc0000;
+    -fx-background-radius: 5em;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover {
+    -fx-background-color: #ff0000;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #222222;
+    -fx-border-color: #550000;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #cc0000;
+}
